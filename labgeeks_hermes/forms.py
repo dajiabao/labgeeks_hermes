@@ -10,3 +10,7 @@ class NotificationForm(ModelForm):
 
     class Meta:
         model = Notification
+        widgets = {
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
+            'title': forms.Textarea(attrs={'class': 'form-control', 'rows': '1'}),
+        }
